@@ -7,6 +7,14 @@
 [![Dependency Status](https://david-dm.org/krux/condition-jenkins/master.svg)](https://david-dm.org/krux/condition-jenkins/master)
 [![devDependency Status](https://david-dm.org/krux/condition-jenkins/master/dev-status.svg)](https://david-dm.org/krux/condition-jenkins/master#info=devDependencies)
 
+## Installation
+
+To install this plugin, execute:
+
+```shell
+npm install --save-dev @krux/condition-jenkins
+```
+
 ## Usage
 
 To use Jenkins for the CI, make the following changes:
