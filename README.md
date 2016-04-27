@@ -6,3 +6,20 @@
 
 [![Dependency Status](https://david-dm.org/krux/condition-jenkins/master.svg)](https://david-dm.org/krux/condition-jenkins/master)
 [![devDependency Status](https://david-dm.org/krux/condition-jenkins/master/dev-status.svg)](https://david-dm.org/krux/condition-jenkins/master#info=devDependencies)
+
+## Usage
+
+To use Jenkins for the CI, make the following changes:
+
+* In the Jenkins build configuration, check 'Inject environment variables to the build process' and set `CI=true` in 'Properties Content'
+* In the Jenkins build configuration, check 'Inject passwords to the build as environment variables' and set `GH_TOKEN` appropriately
+* Configure `release` in your `package.json` as follows (showing `master` as the branch, but you can change that):
+
+```
+   "release": {
+     "branch": "master",
+     "verifyConditions": {
+       "path": "./node_modules/@krux/condition-jenkins"
+     }
+   }
+```
