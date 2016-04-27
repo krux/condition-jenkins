@@ -1,0 +1,50 @@
+{
+  "name": "@krux/condition-jenkins",
+  "description": "make sure things only the right builds on jenkins get published",
+  "version": "0.0.0-placeholder",
+  "author": "Stephan Bönnemann <stephan@boennemann.me> (http://boennemann.me)",
+  "bugs": {
+    "url": "https://github.com/krux/condition-jenkins/issues"
+  },
+  "dependencies": {
+    "@semantic-release/error": "^1.0.0",
+    "semver": "^5.0.3"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.2",
+    "nyc": "^5.0.0",
+    "proxyquire": "^1.7.1",
+    "semantic-release": "^6.0.3",
+    "standard": "^6.0.3",
+    "tap": "^5.0.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "homepage": "https://github.com/krux/condition-jenkins#readme",
+  "keywords": [
+    "publish",
+    "release",
+    "semantic-release",
+    "jenkins-ci"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "tag": "next"
+  },
+  "release": {
+    "branch": "next"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krux/condition-jenkins.git"
+  },
+  "scripts": {
+    "coverage": "nyc report",
+    "coverage:upload": "npm run -s coverage -- --reporter=text-lcov | coveralls",
+    "pretest": "standard",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "nyc tap --no-cov test.js"
+  }
+}
