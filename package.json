@@ -1,7 +1,7 @@
 {
   "name": "@krux/condition-jenkins",
   "description": "make sure things only the right builds on jenkins get published",
-  "version": "0.0.0-placeholder",
+  "version": "1.0.0",
   "author": "Stephan Bönnemann <stephan@boennemann.me> (http://boennemann.me)",
   "bugs": {
     "url": "https://github.com/krux/condition-jenkins/issues"
@@ -29,12 +29,9 @@
     "jenkins-ci"
   ],
   "license": "MIT",
-  "publishConfig": {
-    "access": "public",
-    "tag": "next"
-  },
   "release": {
-    "branch": "next"
+    "debug": false,
+    "verifyConditions": []
   },
   "repository": {
     "type": "git",
